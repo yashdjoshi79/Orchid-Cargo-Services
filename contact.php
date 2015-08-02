@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>About - Orchid Cargo Services</title>
+    <title>Contact - Orchid Cargo Services</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,13 +55,13 @@
                         <a href="./">Home</a>
                     </li>
                     <li>
-                        <a href="about.php">About</a>
+                        <a href="about">About</a>
                     </li>
                     <li>
-                        <a href="rate.php">Rate</a>
+                        <a href="rate">Rate</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -76,17 +76,20 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">About
+                    <h2 class="intro-text text-center">Contact
                         <strong>Orchid Cargo Services</strong>
                     </h2>
                     <hr>
                 </div>
-                <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="img/slide-2.jpg" alt="">
+                <div class="col-md-8">
+                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+                    <iframe width="100%" height="400px" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=19.1678682,73.0971493&amp;spn=19.1678682,73.0971493&amp;t=m&amp;z=4&amp;output=embed"></iframe>
                 </div>
-                <div class="col-md-6">
-                    <p> <b> chintan, provide me content to fill out</b></p>
-					</div>
+                <div class="col-md-4">
+                    <p>Email:
+                        <strong><a href="mailto:name@example.com">orchidcargoservices@gmail.com</a></strong>
+                    </p>
+                </div>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -95,24 +98,36 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Our
-                        <strong>Team</strong>
+                    <h2 class="intro-text text-center">Contact
+                        <strong>form</strong>
                     </h2>
                     <hr>
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-lg-4">
+                                <label>Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="form-group col-lg-12">
+                                <label>Message</label>
+                                <textarea class="form-control" rows="6"></textarea>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="hidden" name="save" value="contact">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-sm-6 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>Chintan Vyas
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="col-sm-6 text-center">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                    <h3>Digant Joshi
-                        <small>Job Title</small>
-                    </h3>
-                </div>
-                <div class="clearfix"></div>
             </div>
         </div>
 

@@ -47,13 +47,13 @@
                         <a href="./"><?php echo("Home");?></a>
                     </li>
                     <li>
-                        <a href="about.php">About</a>
+                        <a href="about">About</a>
                     </li>
                     <li>
-                        <a href="rate.php">Rate</a>
+                        <a href="rate">Rate</a>
                     </li>
 					<li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
             </div>

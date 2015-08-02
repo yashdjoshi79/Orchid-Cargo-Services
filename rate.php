@@ -46,15 +46,15 @@
                     </li>
 
                     <li>
-                        <a href="about.php">About</a>
+                        <a href="about">About</a>
                     </li>
 
                     <li>
-                        <a href="rate.php">Rate</a>
+                        <a href="rate">Rate</a>
                     </li>
 
                     <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -2028,14 +2028,19 @@
 </html>
 <script>
 $( "form" ).submit(function( event ) {
-var form = {};
-$.each($(this).serializeArray(), function (i, field) { form[field.name] = field.value || ""; });
-var json_data = JSON.stringify(form);
-var xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.mongolab.com/api/1/databases/contacts/collections/Contacts?apiKey=ms93l5JwE_M1_aqPRKfAG1CK3UTCtqnI", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
+	var form = {};
+	$.each($(this).serializeArray(), function (i, field) { form[field.name] = field.value || ""; });
+	var json_data = JSON.stringify(form);
+	var xhr = new XMLHttpRequest();
+    var url = "processRateQuery.php";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(json_data);
-  event.preventDefault();
-  swal({   title: "The price for your cargo is:",   text: "$2000",   type: "info",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Book your container!",   cancelButtonText: "Cancel",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {     swal("Booked!", "Your Container is booked!", "success");   } else {     swal("Cancelled", "Start a new search", "error");   } });
-});
+    document.getElementById("status").innerHTML = "processing...";
+	event.preventDefault();
+	swal({   title: "The price for your cargo is:",   text: "$2000",   type: "info",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Book your container!",   cancelButtonText: "Cancel",   closeOnConfirm: false,   closeOnCancel: false }, function(isConfirm){   if (isConfirm) {     swal("Booked!", "Your Container is booked!", "success");   } else {     swal("Cancelled", "Start a new search", "error");   } });
+  });
+    //xhr.open("POST", "https://api.mongolab.com/api/1/databases/contacts/collections/Contacts?apiKey=ms93l5JwE_M1_aqPRKfAG1CK3UTCtqnI", true);
+    //xhr.setRequestHeader("Content-Type", "");
+    //xhr.send();
 </script>
